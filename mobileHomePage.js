@@ -68,7 +68,7 @@ var input = [
                 var output = [];
                 output.push(eventItem.eventKey)
                 eventItem.localetime = {"$gte": startDate, "$lte": endDate};
-                pv = db.points.aggregate([
+                pv = db.mobile_web_tracks.aggregate([
                     {"$match": {"eventValue.q": qudao} },
                     {"$match": eventItem }
                 ]);
